@@ -4,6 +4,7 @@ import { adminDb } from "@/firebaseAdm";
 import { auth } from "@clerk/nextjs/server";
 import { Message } from "@/custom/Chat";
 import { generateLangchainCompletion } from "@/langchain";
+import { Elsie_Swash_Caps } from "next/font/google";
 
 const FREE_LIMIT = 3;
 const PRO_LIMIT = 100;
@@ -40,10 +41,16 @@ export async function askQuestion(id: string, question: string) {
     createdAt: new Date(),
   };
 
-  await chatRef.add(botMessage);
-
-  return {
-    success: true,
-    message: null,
-  };
+  if (reply) {
+    await chatRef.add(botMessage);
+    return {
+      success: true,
+      message: null,
+    };
+  } else {
+    return {
+      success: false,
+      message: null,
+    };
+  }
 }

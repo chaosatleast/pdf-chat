@@ -133,7 +133,7 @@ function Chat({ id }: { id: string }) {
 
             {messages.map((message) => (
               <div key={message.id}>
-                {message.role === "ai" ? (
+                {message.role === "ai" && message.message ? (
                   <div className="flex  justify-start items-end gap-x-2">
                     <div className="bg-gray-300 w-fit p-2 rounded-full ">
                       <BotMessageSquareIcon className="h-4 w-4" />

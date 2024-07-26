@@ -25,7 +25,7 @@ const FilePage = async ({ params: { id } }: { params: { id: string } }) => {
         <PDFView url={url} />
       </div>
       {/* Chat */}
-      <div className=" col-span-5 lg:col-span-2 bg-red-300  overflow-auto">
+      <div className="col-span-5 lg:col-span-2 bg-red-300  overflow-auto">
         <Chat id={id} />
       </div>
     </div>
