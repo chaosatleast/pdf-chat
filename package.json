@@ -16,6 +16,8 @@
     "@langchain/pinecone": "^0.0.8",
     "@pinecone-database/pinecone": "^3.0.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@react-pdf/renderer": "^3.4.4",
+    "byte-size": "^9.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "firebase": "^10.12.4",
@@ -27,11 +29,14 @@
     "react": "^18",
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
+    "react-firebase-hooks": "^5.1.1",
+    "react-pdf": "^9.1.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
+    "@types/byte-size": "^8.1.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
