@@ -7,7 +7,7 @@ function BotChatBubble({ message }: { message: string }) {
     <div className="flex justify-start items-end gap-x-2">
       <div
         className="
-        dark:bg-zinc-900 
+        dark:bg-black 
         w-fit p-2 rounded-full "
       >
         <BotMessageSquareIcon className="h-4 w-4" />

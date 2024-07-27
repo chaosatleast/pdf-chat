@@ -27,7 +27,7 @@ export default function DashboardLayout({
     <ClerkLoaded>
       {/* Header */}
 
-      <div className="flex flex-col h-screen flex-1 dark:bg-zinc-950">
+      <div className="flex flex-col h-full flex-1 dark:bg-zinc-950">
         <Header />
         <main className="overflow-y-auto flex-1">{children}</main>
       </div>

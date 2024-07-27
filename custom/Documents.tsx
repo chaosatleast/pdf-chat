@@ -22,9 +22,8 @@ async function Documents() {
   return (
     <div
       className=" 
-
       flex items-center justify-center flex-wrap gap-5
-    dark:bg-zinc-900"
+    dark:bg-zinc-900 pb-10"
     >
       {/* Placeholder Documents */}
       <PlaceholderDocument />

@@ -56,7 +56,7 @@ const features = [
 export default function Home() {
   return (
     <main className="dark:bg-black min-h-screen flex flex-col  items-center  px-10 pb-28">
-      <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.04] relative overflow-hidden">
+      <div className="h-[40rem] lg:h-[35rem] pt-28 w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.04] relative overflow-hidden">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill="white"
@@ -80,7 +80,13 @@ export default function Home() {
           </p>
         </div>
       </div>
-
+      <div className="relative">
+        <img
+          className=" w-full lg:max-w-5xl mx-auto shadow-lg"
+          src="/image.png"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black from-2%" />
+      </div>
       <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
         <span className="absolute inset-0 overflow-hidden rounded-full">
           <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(var(--azurelane-blue),0.6)_0%,rgba(var(--azurelane-blue),0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>

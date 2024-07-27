@@ -125,7 +125,7 @@ function Chat({ id }: { id: string }) {
 
             {messages.map((message) => (
               <div key={message.id}>
-                {message.role === "ai" && message.message ? (
+                {message.role === "ai" && message.message !== null ? (
                   <BotChatBubble message={message.message} />
                 ) : (
                   <HumanChatBubble message={message.message} />
