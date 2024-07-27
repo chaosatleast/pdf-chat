@@ -4,6 +4,7 @@ import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
 import { Document, Page, pdfjs } from "react-pdf";
+import { PDFDownloadLink, Note, View, StyleSheet } from "@react-pdf/renderer";
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader2Icon, RotateCw, ZoomInIcon, ZoomOutIcon } from "lucide-react";
@@ -105,9 +106,13 @@ function PDFView({ url }: { url: string }) {
           file={file}
           rotate={rotation}
           onLoadSuccess={onDocumentLoadSuccess}
-          className="m-4 overflow-scroll"
+          className="m-4 overflow-scroll relative"
         >
-          <Page className="shadow-lg" scale={scale} pageNumber={currentPage} />
+          <Page
+            className="shadow-lg"
+            scale={scale}
+            pageNumber={currentPage}
+          ></Page>
         </Document>
       )}
     </div>

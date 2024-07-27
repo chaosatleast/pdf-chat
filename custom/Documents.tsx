@@ -20,9 +20,14 @@ async function Documents() {
     .get();
 
   return (
-    <div className="flex flex-wrap bg-gray-100 p-5 justify-center md:justify-start rounded-sm gap-5 max-w-7xl mx-auto ">
-      {/* Placeholder Documents */}
+    <div
+      className=" 
 
+      flex items-center justify-center flex-wrap gap-5
+    dark:bg-zinc-900"
+    >
+      {/* Placeholder Documents */}
+      <PlaceholderDocument />
       {documenSnapshot.docs.map((doc) => {
         const { name, downloadUrl, size } = doc.data();
         return (
@@ -35,7 +40,6 @@ async function Documents() {
           />
         );
       })}
-      <PlaceholderDocument />
     </div>
   );
 }

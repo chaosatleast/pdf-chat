@@ -21,11 +21,11 @@ const FilePage = async ({ params: { id } }: { params: { id: string } }) => {
   return (
     <div className="grid grid-cols-5 h-full overflow-hidden">
       {/* PDF View */}
-      <div className="col-span-5 order-last overflow-y-auto lg:order-first lg:col-span-3 bg-red-100 overflow-auto">
+      <div className="col-span-5 order-last overflow-y-auto lg:order-first lg:col-span-3 dark:bg-zinc-800 overflow-auto">
         <PDFView url={url} />
       </div>
       {/* Chat */}
-      <div className="col-span-5 lg:col-span-2 bg-red-300  overflow-auto">
+      <div className="col-span-5 lg:col-span-2  dark:bg-zinc-900  overflow-auto ">
         <Chat id={id} />
       </div>
     </div>

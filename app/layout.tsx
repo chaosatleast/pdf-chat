@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" className="dark">
         <body className={inter.className}>
           {/* <SignedOut>
             <SignInButton />
@@ -31,8 +31,9 @@ export default function RootLayout({
           <SignedIn>
             <UserButton />
           </SignedIn> */}
-
-          {children}
+          <div className="h-full fixed overflow-y-auto w-screen">
+            {children}
+          </div>
         </body>
       </html>
     </ClerkProvider>

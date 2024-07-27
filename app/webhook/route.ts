@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
       }
 
       //   Update subscription
-      await adminDb.collection("users").doc(userDetails.id).set({
+      await adminDb.collection("users").doc(userDetails.id).update({
         hasActiveMembership: true,
       });
 
@@ -66,15 +66,15 @@ export async function POST(req: NextRequest) {
     case "customer.subscription.deleted":
     case "subscription_schedule.canceled": {
       const subscription = event.data.object as Stripe.Subscription;
-      const userId = subscription.customer as string;
+      const customerId = subscription.customer as string;
 
-      const userDoc = await getUserDetails(userId);
+      const userDetails = await getUserDetails(customerId);
 
-      if (!userDoc?.id) {
+      if (!userDetails?.id) {
         return new Response(`User not found`, { status: 400 });
       }
 
-      await adminDb.collection("users").doc(userDoc.id).set({
+      await adminDb.collection("users").doc(userDetails.id).update({
         hasActiveMembership: false,
       });
 

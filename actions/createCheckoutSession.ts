@@ -8,6 +8,8 @@ import { UserDetails } from "@/app/dashboard/upgrade/page";
 import { getBaseUrl } from "@/getBaseUrl";
 
 export async function createCheckoutSession(userDetails: UserDetails) {
+  auth().protect();
+
   const { userId } = await auth();
 
   if (!userId) {
