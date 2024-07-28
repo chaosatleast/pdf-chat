@@ -103,6 +103,7 @@ function FileUploader() {
             stroke="url(#gradient)"
             stroke-width="6"
             fill="transparent"
+            strokeLinecap="round"
             stroke-dasharray={`${circumference}`}
             stroke-dashoffset={`${circumference * (1 - progress / 100)} `}
           />
