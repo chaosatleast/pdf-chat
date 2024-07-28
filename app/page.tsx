@@ -1,18 +1,14 @@
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Spotlight } from "@/custom/ui/Spotlight";
 import {
-  ArrowBigRight,
   BrainCogIcon,
   ChevronRight,
   EyeIcon,
   GlobeIcon,
   MonitorSmartphoneIcon,
   ServerCogIcon,
-  Zap,
   ZapIcon,
 } from "lucide-react";
-import { Spotlight } from "@/custom/ui/Spotlight";
+import Link from "next/link";
 
 const features = [
   {
@@ -101,8 +97,9 @@ export default function Home() {
       </button>
 
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 text-md ">
-        {features.map((feature) => (
+        {features.map((feature, index) => (
           <div
+            key={index}
             className="
           relative
           overflow-hidden
