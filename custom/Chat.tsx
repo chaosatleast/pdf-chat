@@ -11,6 +11,7 @@ import { start } from "repl";
 import { askQuestion } from "@/actions/askQuestion";
 import BotChatBubble from "./BotChatBubble";
 import HumanChatBubble from "./HumanChatBubble";
+import { useToast } from "@/components/ui/use-toast";
 
 export type Message = {
   id?: string;
@@ -21,12 +22,11 @@ export type Message = {
 
 function Chat({ id }: { id: string }) {
   const { user } = useUser();
+  const { toast } = useToast();
 
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
   const [isPending, startTransition] = useTransition();
-  const [textToCopy, setTextToCopy] = useState(""); // The text you want to copy
-  const [copyStatus, setCopyStatus] = useState(false); // To indicate if the text was copied
 
   const bottomChatRef = React.useRef<HTMLDivElement>(null);
 
@@ -87,6 +87,13 @@ function Chat({ id }: { id: string }) {
 
       if (!success) {
         // Toast error message
+
+        toast({
+          title: "Error",
+          description: message,
+          variant: "destructive",
+        });
+
         setMessages((prev) =>
           prev.slice(0, prev.length - 1).concat([
             {
@@ -97,6 +104,7 @@ function Chat({ id }: { id: string }) {
           ])
         );
       } else {
+        console.log(message);
         setMessages((prev) =>
           prev.slice(0, prev.length - 1).concat([
             {
@@ -133,7 +141,7 @@ function Chat({ id }: { id: string }) {
               </div>
             ))}
 
-            <div ref={bottomChatRef} />
+            <div className="h-5" ref={bottomChatRef} />
           </div>
         )}
       </div>

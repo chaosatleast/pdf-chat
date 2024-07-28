@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/toaster";
 import Documents from "@/custom/Documents";
 import React from "react";
 
@@ -10,6 +11,7 @@ function Dashboard() {
         <h1 className="text-3xl py-5 font-extralight">My Docs</h1>
         <Documents />
       </div>
+      <Toaster />
     </div>
   );
 }

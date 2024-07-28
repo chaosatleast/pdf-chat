@@ -8,7 +8,6 @@ import { useUser } from "@clerk/nextjs";
 import { CheckIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { useTransition } from "react";
-import { createPortal } from "react-dom";
 
 export type UserDetails = {
   email: string;
@@ -75,7 +74,7 @@ function PricingPage() {
                 >
                   <li className="flex gap-x-3">
                     <CheckIcon className="w-5 h-6 text-green-600" />
-                    Upload Documents with maximum 3.
+                    Upload Documents with maximum 2.
                   </li>
                   <li className="flex gap-x-3">
                     <CheckIcon className="w-5 h-6 text-green-600" />
@@ -91,7 +90,7 @@ function PricingPage() {
 
             <div className="rounded-md ring-1  p-8 h-fit pb-8 ring-gray-600 flex flex-col justify-between">
               <div>
-                <h3 className="font-medium text-xl">Advanced Plan</h3>
+                <h3 className="font-medium text-xl">Pro Plan</h3>
                 <p className="text-sm my-4">
                   Experience the full potential of the product by unlocking all
                   features.
@@ -111,7 +110,7 @@ function PricingPage() {
                     <div className="">
                       <CheckIcon className="w-5 h-6 text-green-600 " />
                     </div>
-                    <>Uploads Documents with maximum 20.</>
+                    <>More document uploads limit.</>
                   </li>
                   <li className="flex gap-x-3">
                     <CheckIcon className="w-5 h-6 text-green-600" />

@@ -19,7 +19,7 @@ const model = new ChatOpenAI({
   modelName: "gpt-4o-mini",
 });
 
-const indexName = "docpal";
+export const indexName = "docpal";
 
 async function fetchMessagesFromFirestore(docId: string) {
   const { userId } = await auth();

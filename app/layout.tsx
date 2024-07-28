@@ -12,8 +12,8 @@ import {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PDF CHAT",
-  description: "Analyze your pdf",
+  title: "DocPal",
+  description: "Analyze your pdf effortlessly with our AI",
 };
 
 export default function RootLayout({

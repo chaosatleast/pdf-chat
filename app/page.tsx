@@ -80,12 +80,12 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="relative">
+      <div className="relative mb-4">
         <img
           className=" w-full lg:max-w-5xl mx-auto shadow-lg"
           src="/image.png"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black from-2%" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black from-5%" />
       </div>
       <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
         <span className="absolute inset-0 overflow-hidden rounded-full">

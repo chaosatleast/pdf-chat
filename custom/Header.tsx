@@ -3,6 +3,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 import { FilePlus2 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import UpgradeButton from "./UpgradeButton";
 
 function Header() {
   return (
@@ -29,15 +30,15 @@ function Header() {
           <Button
             asChild
             variant={"outline"}
-            className="bg-black border-neutral-500"
+            className="bg-black border-neutral-500 hidden md:flex"
           >
             <Link href={"/dashboard/upload"}>
               <FilePlus2 className="h-4 w-4" />
             </Link>
           </Button>
-          <div className="">
-            <UserButton />
-          </div>
+
+          <UpgradeButton />
+          <UserButton />
         </div>
       </SignedIn>
     </div>

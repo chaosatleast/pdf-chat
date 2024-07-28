@@ -3,6 +3,7 @@ import { auth } from "@clerk/nextjs/server";
 import { adminDb } from "@/firebaseAdm";
 import PDFView from "@/custom/PDFView";
 import Chat from "@/custom/Chat";
+import { Toaster } from "@/components/ui/toaster";
 
 const FilePage = async ({ params: { id } }: { params: { id: string } }) => {
   auth().protect();
@@ -26,6 +27,7 @@ const FilePage = async ({ params: { id } }: { params: { id: string } }) => {
       </div>
       {/* Chat */}
       <div className="col-span-5 lg:col-span-2  dark:bg-zinc-900  overflow-auto ">
+        <Toaster />
         <Chat id={id} />
       </div>
     </div>
